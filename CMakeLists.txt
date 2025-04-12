@@ -4,6 +4,7 @@ project(hdf5_logger VERSION 0.1.0 LANGUAGES C)
 # Options
 option(BUILD_SHARED_LIBS "Build shared libraries" OFF)
 option(BUILD_TESTS "Build tests" ON)
+option(BUILD_EXAMPLES "Build examples" ON)
 
 # Trouver la bibliothèque HDF5
 find_package(HDF5 REQUIRED COMPONENTS C)
@@ -51,6 +52,11 @@ if(BUILD_TESTS)
     add_subdirectory(tests)
 endif()
 
+# Exemples
+if(BUILD_EXAMPLES)
+    add_subdirectory(examples)
+endif()
+
 # Documentation des versions
 set_target_properties(hdf5_logger PROPERTIES
     VERSION ${PROJECT_VERSION}
@@ -61,4 +67,5 @@ message(STATUS "Configuration de ${PROJECT_NAME} ${PROJECT_VERSION}")
 message(STATUS "  HDF5 trouvé: ${HDF5_FOUND}")
 message(STATUS "  HDF5 version: ${HDF5_VERSION}")
 message(STATUS "  Créer les tests: ${BUILD_TESTS}")
+message(STATUS "  Créer les exemples: ${BUILD_EXAMPLES}")
 message(STATUS "  Créer des bibliothèques partagées: ${BUILD_SHARED_LIBS}")
