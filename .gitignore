@@ -1,0 +1,61 @@
+# Fichiers objets
+*.o
+*.ko
+*.obj
+*.elf
+
+# Fichiers de précompilation
+*.gch
+*.pch
+
+# Bibliothèques
+*.lib
+*.a
+*.la
+*.lo
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Exécutables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# Dossiers de build
+build/
+bin/
+lib/
+
+# Fichiers CMake
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+Testing/
+cmake_install.manifest
+install_manifest.txt
+compile_commands.json
+
+# Fichiers système spécifiques à Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Fichiers systèmes spécifiques à MacOS
+.DS_Store
+
+# Fichiers IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Fichiers de log HDF5 générés par les tests
+*.h5
+
+# Dossiers de test de couverture
+coverage/
